@@ -52,6 +52,7 @@ public class CheeseController {
                                        Model model) {
         if (errors.hasErrors()) {
             model.addAttribute("title", "Add Cheese");
+            model.addAttribute("categories", categoryDao.findAll());
             return "cheese/add";
 
         }
